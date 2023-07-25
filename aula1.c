@@ -19,4 +19,16 @@ int main() {
 	for (i = 0; i < 10; i++) {
 		vetor[i] = 0;
 	}
+	
+	// preenchimento do vetor
+	for (i = 0; i < 10; i++) {
+		printf("Digite o valor da posição %d do vetor", i);
+		scanf("%d", &vetor[i]);
+	}
+	
+	// impressão do vetor
+	for (i = 0; i < 10; i++) {
+		printf("vetor[%d] = %d\n", i, vetor[i]);
+	}
+
 }
