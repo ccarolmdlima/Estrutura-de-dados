@@ -81,3 +81,62 @@ int main() {
 		printf("vetorInvertido[%d] = %d\n", i, vetorInvertido[i]);
 	}
 }
+
+------------------------------------------------------------------------------------------------------------------------
+///////////////////////////////////////
+//// programa de inversão de vetor ////
+///////////////////////////////////////
+
+
+// importação de pacotes
+#include <stdio.h>
+
+// declaração de variáveis
+int matriz[2][3], transposta[3][2], i = 0, j = 0;
+
+////////////////////////////////////////////////
+//// função principal de execução do código ////
+////////////////////////////////////////////////
+
+int main() {
+	
+	// limpeza de memória
+	for(i = 0; i < 2; i++) {
+		for(j = 0; j < 3; j++) {
+			matriz[i][j] = 0;
+			transposta[j][i];
+		}
+	}
+	
+	//preenchimento da matriz
+	for(i = 0; i < 2; i++) {
+		for(j = 0; j < 3; j++) {
+			printf("Digite o valor da matriz[%d][%d] = ", 
+												i, j);
+			scanf("%d", &matriz[i][j]);
+			
+		}
+	}
+	
+	// transposicao propriamente dita
+	for(i = 0; i < 2; i ++) {
+		for(j = 0; j < 3; j++) {
+			transposta[j][i] = matriz [i][j];
+		}
+	}
+	
+	// impressao das matrizes
+	for(i = 0; i < 2; i++) {
+		for(j = 0; j < 3; j++) {
+			printf("%d\t", matriz[i][j]);
+		}
+		printf("\n");
+	}
+	
+	for(i = 0; i < 3; i++) {
+		for(j = 0; j < 2; j++) {
+			printf("%d\t", transposta[i][j]);
+		}
+		printf("\n");
+	}
+}
