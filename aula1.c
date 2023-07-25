@@ -22,7 +22,7 @@ int main() {
 	
 	// preenchimento do vetor
 	for (i = 0; i < 10; i++) {
-		printf("Digite o valor da posição %d do vetor", i);
+		printf("Digite o valor da posicao %d do vetor ", i);
 		scanf("%d", &vetor[i]);
 	}
 	
