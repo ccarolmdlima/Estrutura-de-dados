@@ -23,7 +23,7 @@ int main() {
 	
 	// inicializacao do vetor
 	for (i = 0; i < 10000; i++) {
-		vetor[i] = (rand() % 10000);
+		vetor[i] = i;
 	}
 	
 	// definicao da busca
@@ -33,11 +33,11 @@ int main() {
 	// busca propriamente dita
 	inicio = 0;
 	fim = 9999;
-	while (fim > inicio) {
+	while (fim >= inicio) {
 		meio = ((inicio + fim)/2);
 		
 		if (vetor[meio] == busca) {
-			printf("achei!");
+			printf("esta na posicao %d", vetor[meio]);
 			return 0;
 		} else if (vetor[meio] > busca) {
 			fim = (meio - 1);
