@@ -33,3 +33,69 @@ int main () {
 	printf("%d\n", cabeca -> numero);
 	
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////
+// programa de Lista encadeada simples //
+////////////////////////////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//////////////////////////////////
+// definição da estrutura do no //
+/////////////////////////////////
+
+struct no {
+	int numero;
+	struct no *proximo;
+};
+
+/////////////////////////////
+// declaração de variaveis //
+////////////////////////////
+
+struct no *cabeca;
+
+//////////////////////////////////////
+// funcao que insere um no na lista //
+//////////////////////////////////////
+
+void inserir(int parametroNumero) {
+	
+	// criar um novo no
+	struct no *novoNo = NULL;
+	novoNo = (struct no *) malloc(sizeof(struct no*));
+	novoNo -> numero = parametroNumero;
+	novoNo -> proximo = NULL;
+			
+	if (cabeca == NULL) {
+		cabeca = (struct no *) malloc(sizeof(struct no *));
+		cabeca -> numero = parametroNumero;
+		cabeca -> proximo = NULL;
+	} else {
+		// procurando o ultimo elemento da lista
+		struct no *ponteiro = cabeca;
+		while (ponteiro -> proximo != NULL) {
+			ponteiro = ponteiro -> proximo;
+		}
+		
+		// apontar o ultimo para o novo
+		ponteiro -> proximo = novoNo;
+	}
+}
+
+//////////////////////
+// funcao principal //
+/////////////////////
+
+int main () {
+	cabeca = (struct no *) malloc(sizeof(struct no *));
+	cabeca -> numero = 10;
+	cabeca -> proximo = NULL;
+	
+	printf("%s\n", cabeca);
+	printf("%d\n", cabeca -> numero);
+	
+}
