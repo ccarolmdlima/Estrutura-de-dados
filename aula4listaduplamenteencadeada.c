@@ -188,6 +188,9 @@ int main() {
 	
 	excluir(1);
 	excluir(3);
+	excluir(3);
 	excluir(6);
+	
+	imprimir();
 	
 }
