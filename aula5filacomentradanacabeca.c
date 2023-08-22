@@ -59,4 +59,6 @@ int remover() {
 			free(temp);
 		}
 	}
+	
+	return retorno;
 }
