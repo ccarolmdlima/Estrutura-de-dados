@@ -61,7 +61,7 @@ int main() {
 	// criacao da arvore
 	int i = 0;
 	for (i = 1; i < 10; i++) {
-		raiz = inserir(raiz, i):
+		raiz = inserir(raiz, i);
 	}
 	
 	// navegacoes
