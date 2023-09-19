@@ -42,7 +42,7 @@ struct no *inserir (struct no *raiz, int numero) {
 //////////////////////////////////////////////
 
 void navegarPreOrdem(struct no *raiz) {
-	if (raiz =! NULL){
+	if (raiz != NULL) {
 		navegarPreOrdem(raiz -> esquerda);
 		navegarPreOrdem(raiz -> direita);
 		printf("%d\t", raiz -> numero);
