@@ -36,3 +36,15 @@ struct no *inserir (struct no *raiz, int numero) {
 	
 	return raiz;
 }
+
+//////////////////////////////////////////////
+// funcao que navega  a arvore em PRE-ORDEM //
+//////////////////////////////////////////////
+
+void navegarPreOrdem(struct no *raiz) {
+	if (raiz =! NULL){
+		printf("%d\t", raiz -> numero);
+		navegarPreOrdem(raiz -> esquerda);
+		navegarPreOrdem(raiz -> direita);
+	}
+}
