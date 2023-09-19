@@ -43,8 +43,34 @@ struct no *inserir (struct no *raiz, int numero) {
 
 void navegarPreOrdem(struct no *raiz) {
 	if (raiz =! NULL){
-		printf("%d\t", raiz -> numero);
 		navegarPreOrdem(raiz -> esquerda);
 		navegarPreOrdem(raiz -> direita);
+		printf("%d\t", raiz -> numero);
 	}
+}
+
+//////////////////////
+// funcao principal //
+//////////////////////
+
+int main() {
+	// declaracao de variaveis
+	struct no *raiz = NULL;
+	time_t t;
+	
+	// criacao da arvore
+	int i = 0;
+	for (i = 1; i < 10; i++) {
+		raiz = inserir(raiz, i):
+	}
+	
+	// navegacoes
+	printf("Pre-Ordem: ");
+	navegarPreOrdem(raiz);
+	printf("\----------------------------\n");
+	printf("Em-Ordem");
+	navegarEmOrdem(raiz);
+	printf("\----------------------------\n");
+	printf("Pos-Ordem");
+	navegadorPosOrdem(raiz);
 }
